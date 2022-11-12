@@ -1,0 +1,17 @@
+<!-- Kế thừa lại layout master -->
+<?php $_shouldextend[1]=1; ?>
+
+<!-- Truyền giá trị cho những phần thay đổi -->
+<!-- yield(tên)  ~ section(tên, giá trị) -->
+<?php $this->startSection('title', 'Danh sách sản phẩm'); ?>
+
+<!-- yield(tên) ~ section(tên) nội dung endsection -->
+<?php $this->startSection('content-title', 'Dashboard'); ?>
+<?php $this->startSection('content'); ?>
+
+
+
+<?php $this->stopSection(); ?>
+
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>
